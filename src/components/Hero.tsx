@@ -2,6 +2,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const Hero = () => {
   return (
@@ -20,26 +22,8 @@ const Hero = () => {
             that drive growth and deliver outstanding user experiences.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="gap-2 group">
-              View Our Work
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline">
-              Contact Us
-            </Button>
           </div>
-          
-          <div className="pt-4 flex items-center gap-8">
-            <div>
-              <p className="font-bold text-3xl text-primary">50+</p>
-              <p className="text-sm text-muted-foreground">Projects Completed</p>
-            </div>
-            <div className="h-12 w-px bg-gray-200"></div>
-            <div>
-              <p className="font-bold text-3xl text-primary">98%</p>
-              <p className="text-sm text-muted-foreground">Client Satisfaction</p>
-            </div>
-          </div>
+        
         </div>
         
         <div className="relative animate-fade-up animate-delay-200">

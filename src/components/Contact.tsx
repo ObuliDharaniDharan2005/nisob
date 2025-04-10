@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -63,7 +65,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium mb-1">Email</h4>
                   <a href="mailto:contact@nisobtechnology.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    contact@nisobtechnology.com
+                    nisobtech@gmail.com
                   </a>
                 </div>
               </div>
@@ -75,7 +77,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium mb-1">Phone</h4>
                   <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                    +1 (234) 567-890
+                    +91 8148072005
                   </a>
                 </div>
               </div>
@@ -87,77 +89,31 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium mb-1">Location</h4>
                   <p className="text-muted-foreground">
-                    123 Tech Street, San Francisco, CA 94107
+                    salem
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Full Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="John Doe"
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email Address
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="john@example.com"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="How can we help you?"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your project..."
-                  rows={5}
-                  required
-                />
-              </div>
-              <Button type="submit" className="gap-2" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Message"}
-                <Send size={16} />
-              </Button>
-            </form>
-          </div>
+<div className="lg:col-span-3 space-y-6">
+  <p className="text-gray-700 text-base">
+    Want to get in touch quickly? Chat with us on <strong>WhatsApp</strong> and get instant replies from our team. Just click the button below!
+  </p>
+
+  <a
+    href="https://wa.me/918148072005?text=Hi%20NISOB%20Team%2C%20I'm%20interested%20in%20your%20services!"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button className="gap-2 bg-green-600 hover:bg-green-700">
+      Chat on WhatsApp
+      <MessageCircle size={18} />
+    </Button>
+  </a>
+</div>
+
+
         </div>
       </div>
     </section>

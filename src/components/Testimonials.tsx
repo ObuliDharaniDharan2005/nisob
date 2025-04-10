@@ -13,7 +13,6 @@ const Testimonials = () => {
             Don't just take our word for it. Here's what our clients have to say about working with us.
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">

@@ -61,7 +61,7 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          <Button size="sm">Get a Quote</Button>
+         
         </div>
 
         {/* Mobile Menu Toggle */}
